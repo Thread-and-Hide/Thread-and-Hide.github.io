@@ -31,7 +31,6 @@
             background-color: #b0ad99; /* Colour of hovered link buttons */
         }
         .content {
-            display: block;
             background-color: #f7f5e9;
             padding: 20px; /* Add some padding */
         }
@@ -43,6 +42,10 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
+        }
+        .main-image img {
+                max-width: 100%; /* Ensure the image fits within the square */
+            height: auto; /* Maintain aspect ratio */
         }
         .text-below {
             text-align: center;
@@ -67,7 +70,6 @@
 <div class="content">
     <div class="main-image">
             <img alt="Main-image" src="images/Main-Image.png">
-            
     </div>
 </div>
 
