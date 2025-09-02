@@ -1,84 +1,79 @@
- <style>
+<style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
+            background-color: #333;
+            color: white;
         }
-        .product {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
+        .logo {
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
         }
-        .product img {
-            width: 100%;
-            height: 150px; /* Adjust height as needed */
-            object-fit: cover; /* Ensures images cover the area */
-            background-color: #eaeaea; /* Placeholder background */
+        .logo img {
+            max-width: 150px; /* Adjust logo size */
         }
-        .product h3 {
-            margin: 10px 0;
-            font-size: 1.2em;
+        nav {
+            display: flex;
+            flex-direction: column;
         }
-        .product p {
-            color: #666;
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px); /* Adjust height based on header size */
+            background-color: #f4f4f4;
+        }
+        .blank-square {
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            border: 2px dashed #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .text-below {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 
 
 
 <header>
-    <h1>Welcome to My Online Store</h1>
+    <nav>
+        <a href="page1.html">Link 1</a>
+        <a href="page2.html">Link 2</a>
+        <a href="page3.html">Link 3</a>
+        <a href="page4.html">Link 4</a>
+    </nav>
+    <div class="logo">
+        <img alt="Logo" src="logo.png"> 
+    </div>
 </header>
 
-<div class="container">
-    <div class="product">
-        <img alt="Product 1" src="placeholder.jpg">
-        <h3>Product 1</h3>
-        <p>$19.99</p>
+<div class="content">
+    <div class="blank-square">
+        
     </div>
-    <div class="product">
-        <img alt="Product 2" src="placeholder.jpg">
-        <h3>Product 2</h3>
-        <p>$29.99</p>
-    </div>
-    <div class="product">
-        <img alt="Product 3" src="placeholder.jpg">
-        <h3>Product 3</h3>
-        <p>$39.99</p>
-    </div>
-    <div class="product">
-        <img alt="Product 4" src="placeholder.jpg">
-        <h3>Product 4</h3>
-        <p>$49.99</p>
-    </div>
-    <div class="product">
-        <img alt="Product 5" src="placeholder.jpg">
-        <h3>Product 5</h3>
-        <p>$59.99</p>
-    </div>
-    <div class="product">
-        <img alt="Product 6" src="placeholder.jpg">
-        <h3>Product 6</h3>
-        <p>$69.99</p>
-    </div>
-
-
 </div>
+
+<div class="text-below">
+    <p>Insert text here</p>
+</div>
+
