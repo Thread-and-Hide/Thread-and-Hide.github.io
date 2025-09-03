@@ -10,7 +10,7 @@
 			right: 0; /* Align it to the right */
 			z-index: 1000;
 			display: flex;
-           /* justify-content: space-between;	*/
+			justify-content: space-between;
             align-items: center;
             padding: 10px;
             background-color: #fff;
@@ -24,7 +24,8 @@
         }
         nav {
             display: flex;
-            flex-direction: row;
+           /* flex-direction: row; */
+			flex: 1;
         }
         nav a {
             color: black;
@@ -33,24 +34,34 @@
         }
         nav a:hover {
             background-color: #b0ad99; /* Colour of hovered link buttons */
-			
+			font-weight: bold;
         }
-        .content {
-            background-color: #f7f5e9;
-          
-        }
+		
+		.nav-right	{
+		display: flex;					/* Make it a flex container */
+        justify-content: flex-end; 		/* Align items to the right */
+        flex: 1; 						/* Prevent it from growing */ 
+		}
+		
+		.container {
+			display: flex; 				/* Use Flexbox */
+			justify-content: center; 	/* Center horizontally */
+			align-items: center; 		/* Center vertically (optional) */
+			width: 100%; 				/* Full width */
+			background-color: #f7f5e9;
+		}
+	
         .main-image {
-            width: 100%;
-            height: auto;
-            background-color: white;
-            display: block;
-            justify-content: center;
-            align-items: center;
-        
+            display: flex;
+			justify-content: center;
+			align-items: center;
+			height: auto;
+			width: 100%;
+			background-color: #f7f5e9;				
         }
         .main-image img {
-            max-width: 100%;	/* Ensure the image fits within the square */
-            height: auto; 		/* Maintain aspect ratio */
+            max-width: 100%;			/* Ensure the image fits within the square */
+            height: auto; 				/* Maintain aspect ratio */
 			
         }	
         .text-below {
@@ -58,8 +69,6 @@
             margin-top: 20px;
         }
     </style>
-
-
 
 <header>
     <nav>
@@ -71,15 +80,24 @@
     <div class="logo">
         <img alt="Thread & Hide" src="images/Thread&Hide.png"> 
     </div>
+	
+	<nav class="nav-right">
+		<a href="Profile.html">Profile</a>
+		<a href="Cart.html">Cart</a>
+	</nav>
+	
 </header>
 
-<div class="content">
-    <div class="main-image">
+<div class="container">
+   
+        <div class="main-image">
             <img alt="Main-image" src="images/Main-Image.png">
-    </div>
+        </div>
+    
 </div>
 
 <div class="text-below">
     <h1>My Story</h1>
         <p>Thread & Hide is run by Timothy Walker, a leather craftsman based in Melbourne. </p>
 </div>
+
