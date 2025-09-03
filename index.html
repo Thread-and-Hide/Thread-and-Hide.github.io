@@ -1,3 +1,4 @@
+<html>
 <style>
         body {
             margin: 0;
@@ -14,6 +15,7 @@
             align-items: center;
             padding: 10px;
             background-color: #fff;
+			
         }
         .logo {
             text-align: center;
@@ -28,19 +30,63 @@
 			flex: 1;
         }
         nav a {
+			font-size: 16px;
             color: black;
             text-decoration: none;
             padding: 5px 10px;
         }
-        nav a:hover {
+        nav a:hover, .dropdown:hover .dropbtn {
             background-color: #b0ad99; /* Colour of hovered link buttons */
 			font-weight: bold;
         }
 		
 		.nav-right	{
-		display: flex;					/* Make it a flex container */
-        justify-content: flex-end; 		/* Align items to the right */
-        flex: 1; 						/* Prevent it from growing */ 
+			display: flex;					/* Make it a flex container */
+			justify-content: flex-end; 		/* Align items to the right */
+			flex: 1; 						/* Prevent it from growing */ 
+		}
+		
+		.dropdown {
+			float: left;
+			overflow: hidden;
+		}
+		
+		.dropdown .dropbtn { 
+			border: none;
+			outline: none;
+			color: black;
+			padding: 5px 10px;
+			background-color: inherit;
+			margin: 0;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			float: none;
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+			font-size: 16px;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #ddd;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
 		}
 		
 		.container {
@@ -69,18 +115,27 @@
             margin-top: 20px;
         }
     </style>
-
+	
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
+	
 <header>
+
     <nav>
         <a href="index.html">Home</a>
-        <a href="https://www.etsy.com/shop/threadhide/?etsrc=sdt">Store</a>
-        <a href="page3.html">About Us</a>
-        <a href="page4.html">Contact</a>
+		<div class="dropdown">
+			<button aria-expanded="false" aria-haspopup="true" class="dropbtn">
+				<i class="fa fa-bars"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="https://www.etsy.com/shop/threadhide/?etsrc=sdt">Store</a>
+				<a href="page3.html">About Us</a>
+				<a href="page4.html">Contact</a>
+		</div>
     </nav>
+	
     <div class="logo">
         <img alt="Thread & Hide" src="images/Thread&Hide.png"> 
     </div>
@@ -103,9 +158,13 @@
 <div class="text-below">
     <h1>My Story</h1>
         <p>Thread & Hide is run by Timothy Walker, a leather craftsman based in Melbourne. </p>
-		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
+
+
+
+</html>
